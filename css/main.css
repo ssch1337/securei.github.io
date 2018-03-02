@@ -1,6 +1,6 @@
 .preloader {
-  background: #2E3840;
-  color: #FFF;
+  background: #FFF;
+  color: #000;
   font-family: 'Open Sans', sans-serif;
   font-size: 48px;
   width: 100%;
@@ -12,12 +12,42 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  overflow: auto;
+  flex-direction: column;
 }
 
-.btn {
-  background: #4481A6;
+.btns {
+  background: #34a853;
   color: #FFF;
+  padding: 7px 30px;
+  border-radius: 80px;
+  font-size: 24px;
+  opacity: 0;
+  border: 1px solid #34a853;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.kr {
+  padding: 10px 0;
+  border-bottom: 1px solid #34a853;
+  color: #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.hr {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background: #34a853;
+  width: 80px;
+  height: 3px;
+  border-radius: 1px;
+}
+
+.btns:hover {
+  background: transparent;
+  border: 1px solid #34a853;
+  color: #34a853;
 }
 
 .ml7 {
@@ -37,6 +67,12 @@
   line-height: 1em;
 }
 
-.none {
-  opacity: 0;
+.qte {
+  border-left: 2px solid #34a853;
+  padding: 10px 0 10px 20px;
+  background: #f0f0f0;
+}
+
+.bld {
+  font-weight: bold;
 }
