@@ -97,6 +97,7 @@ btnanim
     translateX: [-500, 0],
     opacity: 1,
     delay: 0,
+    zIndex: 7,
     easing: 'easeOutExpo'
   })
 
