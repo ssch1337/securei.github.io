@@ -1,3 +1,11 @@
+/****************************/
+/*      Created 2018        */
+/*      by Sergey Tseglov   */
+/****************************/
+/*
+  P.S. Пожалуйста, не читайте код, сильно торопился сделал всё неакуратно, главное работает.
+*/
+
 var lineDrawing = anime.timeline({
   direction: 'alternate',
   loop: false
@@ -38,8 +46,8 @@ lineDrawing
   })
   .add({
     targets: svg,
+    opacity: 1,
     translateY: [0,-400],
-    opacity: [1,0],
     easing: "easeInExpo",
     duration: 1000,
     delay: function(el, i) {
