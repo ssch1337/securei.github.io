@@ -27,7 +27,6 @@ path {
      -moz-user-select: none;  
       -ms-user-select: none;  
           user-select: none;
-  transform: translateY(100px);
   cursor: pointer;
 }
 
@@ -84,7 +83,7 @@ path {
   height: 100%;
 }
 
-*, *:before, *:after {
+.from-middle, .from-middle:before, .from-middle:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -165,6 +164,7 @@ body {
 .container {
   opacity: 0;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 h2 {
@@ -188,4 +188,33 @@ h2 {
   width: 80px;
   height: 3px;
   border-radius: 1px;
+}
+
+.text-wrapper {
+  opacity: 0;
+}
+
+.kr {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #20202A;
+  font-size: 18px;
+  padding: 5px 0;
+  opacity: 0;
+  background: #111116;
+  z-index: 9999;
+}
+
+.pd {
+  margin-top: 40px;
+}
+
+.bd {
+  font-weight: bold;
+}
+
+p {
+  letter-spacing: 0.5px
 }

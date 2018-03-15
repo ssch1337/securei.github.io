@@ -8,6 +8,15 @@ btnanim = anime.timeline({
   autoplay: false
 });
 
+anime.timeline({loop: false})
+  .add({
+    targets: '.kr',
+    translateY: [-200, 0],
+    opacity: 1,
+    easing: "easeOutExpo",
+    delay: 200
+  })
+
 $('.ml .letters').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 });
@@ -42,6 +51,10 @@ lineDrawing
     zIndex: 6
   })
   .add({
+    targets: '.text-wrapper',
+    opacity: 1
+  })
+  .add({
     targets: '.ml .line',
     scaleY: [0,1],
     opacity: [0.2,1],
@@ -68,9 +81,8 @@ lineDrawing
   .add({
     targets: '.buttn',
     opacity: 1,
-    translateY: 0,
-    easing: "linear",
-    duration: 300
+    translateY: [-200,0],
+    easing: "easeOutExpo"
   })
 
 lineDrawing.complete = function(){
@@ -105,3 +117,8 @@ $('.buttn').click(function(){
   btnanim.play();
   console.log('btn click')
 });
+
+btnanim.complete = function(){
+  $('.preloader').remove();
+  $('.bylogo').remove();
+}
