@@ -1,0 +1,363 @@
+/****************************/
+/*      Created 2018        */
+/*      by Sergey Tseglov   */
+/****************************/
+
+/*
+  Пожалуйста, не читайте код, сильно торопился сделал всё неакуратно, главное работает.
+*/
+
+path {
+  fill: #111116;
+}
+
+.lineDrawing {
+  width: 70%;
+}
+
+path {
+  stroke-dashoffset: 1000px;
+}
+
+/*  Button  */
+
+.buttn {
+  opacity: 0;
+  margin-top: 25px;
+  position: relative; 
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  color: var(--inv);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);  
+  -webkit-user-select: none;  
+     -moz-user-select: none;  
+      -ms-user-select: none;  
+          user-select: none;
+  cursor: pointer;
+}
+
+.buttn:before, .buttn:after {
+  content: '';
+  position: absolute; 
+  -webkit-transition: inherit;  
+  transition: inherit;
+  z-index: -1;
+}
+
+.buttn:hover {
+  color: var(--def);
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
+.buttn:hover:before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.buttn:hover:after {
+  background: var(--inv);
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.butt2 {
+  -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);  
+  -webkit-user-select: none;  
+     -moz-user-select: none;  
+      -ms-user-select: none;  
+          user-select: none;
+  cursor: pointer;
+}
+
+.butt2:before, .butt2:after {
+  content: '';
+  position: absolute; 
+  -webkit-transition: inherit;  
+  transition: inherit;
+  z-index: -1;
+}
+
+.butt2:hover {
+  color: #20202A;
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
+.butt2:hover:before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.butt2:hover:after {
+  background: #fff;
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.from-middle:before {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  border: 1px solid var(--inv);
+  border-left: 0;
+  border-right: 0;
+}
+
+.from-middle:after {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: var(--inv);
+}
+
+.from-middle:hover:before {
+  left: 0;
+  width: 100%;
+}
+
+.from-middle:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.from-top:before, 
+.from-top:after {
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+
+.from-top:before {
+  bottom: 0;  
+  border: 1px solid #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.from-top:after {
+  top: 0;
+  height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+  height: 100%;
+}
+
+body {
+  --def: #111116;
+  --inv: #10b4f5;
+}
+
+/* End button */
+
+.preloader {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 48px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bylogo {
+  width: 100%;
+  height: 100%;
+  color: #5E89FB;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+body {
+  background: #111116 !important;
+  color: #fff !important;
+  font-family: 'Open Sans', sans-serif, OpenSans;
+}
+
+.ml {
+  font-weight: 900;
+}
+
+.ml .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml .line1 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
+}
+
+.container {
+  opacity: 0;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+.start {
+  margin-top: 20px;
+}
+
+.quote {
+  padding: 10px 20px;
+  background: #20202A;
+  border-left: 1px solid #18FF92;
+}
+
+.hr {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background: #5E89FB;
+  width: 80px;
+  height: 3px;
+  border-radius: 1px;
+}
+
+.text-wrapper {
+  opacity: 0;
+}
+
+.kr {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #20202A;
+  font-size: 18px;
+  padding: 5px 0;
+  opacity: 0;
+  background: #111116;
+  z-index: 9999;
+}
+
+.pd {
+  margin-top: 40px;
+}
+
+.bd {
+  font-weight: bold;
+}
+
+p {
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+
+.mn {
+  display: inline-block;
+}
+
+.content {
+  padding-top: 30px;
+  opacity: 0;
+  display: none;
+}
+
+.lists {
+  display: none;
+}
+
+.list {
+  opacity: 0;
+  padding: 5px 20px;
+  border-left: 1px solid #10b4f5;
+  margin: 15px;
+}
+
+.list:hover {
+  padding-left: 30px;
+}
+
+.btn-list {
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 0;
+}
+
+.btn-list:before, 
+.btn-list:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.btn-list:before {
+  right: 0;
+  border: 1px solid var(--inv);
+  border-left: 0;
+  border-right: 0;  
+}
+
+.btn-list:after {
+  left: 0;
+}
+
+.btn-list:hover:before,
+.btn-list:hover:after {
+  width: 100%;
+}
+
+.menu {
+  height: 65px;
+  background: #20202A;
+  opacity: 0;
+  display: none;
+  transform: translateY(-100px);
+}
+
+.alll {
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 150px;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+  letter-spacing: 1px;
+}
