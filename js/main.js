@@ -64,7 +64,6 @@ lists = {
 var x = 0, y = 1;
 while(x < 1) {
   if(lists['l'+y] == undefined) break;
-  console.log('fuck' + y);
   $('.lists').append('<div class="l' + y + ' list"><h1>' + lists['l'+y].header +'</h1><p>'+ lists['l'+y].parag +'</p><div id="'+y+'" class="btn-list buttn">Прочитать дальше</div></div>');
   y++;
 }
@@ -221,10 +220,6 @@ listanim
     easing: 'easeOutExpo'
   })
   .add({
-    targets: '.lists',
-    opacity: 1
-  })
-  .add({
     targets: '.list',
     translateX: [-200,0],
     opacity: 1,
@@ -237,7 +232,6 @@ listanim
 $('.learn').click(function(){
   btnanim.restart();
   $('.lists').css({"display":"block"})
-  console.log('btn click');
 });
 
 btnanim.complete = function(){
@@ -284,7 +278,7 @@ var animlist = anime.timeline({loop: false, autoplay: false})
       return i * 60;
     }
   })
-
+if(animlist.complete == undefined) {
 $('.butt2').click(function(){
   menuanim.restart();
   setTimeout(function(){
@@ -292,6 +286,7 @@ $('.butt2').click(function(){
     $('.menu').fadeOut();
   }, 850);
 });
+}
 
 menuanim.complete = function(){
   animlist.restart();
