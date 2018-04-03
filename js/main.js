@@ -184,7 +184,8 @@ lineDrawing
   })
   .add({
     targets: '.buttn',
-    opacity: 1
+    opacity: 1,
+    duration: 200
   })
 
 lineDrawing.complete = function(){
@@ -203,12 +204,8 @@ btnanim
     targets: '.preloader',
     opacity: [1,0],
     translateY: [0,-400],
-    duration: 1200,
+    duration: 1400,
     easing: 'easeOutExpo'
-  })
-  .add({
-    targets: '.lists',
-    opacity: 1
   })
   .add({
     targets: '.list',
@@ -324,3 +321,7 @@ menuanim.complete = function(){
 animlist.complete = function(){
   $('.list').css({'transition':'0.5s'})
 }
+
+// *****************************
+// lineDrawing.seek(lineDrawing.duration);
+// *****************************

@@ -154,6 +154,7 @@ path {
 body {
   --def: #111116;
   --inv: #10b4f5;
+  overflow-x:hidden; 
 }
 
 /* End button */
@@ -297,6 +298,7 @@ p {
 
 .lists {
   display: none;
+  opacity: 1;
 }
 
 .list {
